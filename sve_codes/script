@@ -1,0 +1,2 @@
+export GEM5_PATH=/chalmers/users/soniar/Downloads/gem5
+export M5_PATH=$GEM5_PATH/imgs/aarch-system-20170616/
