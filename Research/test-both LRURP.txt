@@ -1,0 +1,317 @@
+1.
+L1D L1I : LRU
+
+
+perf:
+system.cpu.icache.demand_hits::.cpu.inst         5781                       # number of demand (read+write) hits
+system.cpu.icache.demand_hits::total             5781                       # number of demand (read+write) hits
+system.cpu.icache.overall_hits::.cpu.inst         5781                       # number of overall hits
+system.cpu.icache.overall_hits::total            5781                       # number of overall hits
+system.cpu.icache.demand_misses::.cpu.inst          528                       # number of demand (read+write) misses
+system.cpu.icache.demand_misses::total            528                       # number of demand (read+write) misses
+system.cpu.icache.overall_misses::.cpu.inst          528                       # number of overall misses
+system.cpu.icache.overall_misses::total           528                       # number of overall misses
+
+
+system.cpu.dcache.demand_hits::.cpu.data         3418                       # number of demand (read+write) hits
+system.cpu.dcache.demand_hits::total             3418                       # number of demand (read+write) hits
+system.cpu.dcache.overall_hits::.cpu.data         3418                       # number of overall hits
+system.cpu.dcache.overall_hits::total            3418                       # number of overall hits
+system.cpu.dcache.demand_misses::.cpu.data          868                       # number of demand (read+write) misses
+system.cpu.dcache.demand_misses::total            868                       # number of demand (read+write) misses
+system.cpu.dcache.overall_misses::.cpu.data          868                       # number of overall misses
+system.cpu.dcache.overall_misses::total           868                       # number of overall misses
+
+
+
+2.
+L1D L1I : LRU
+L1D L1I HWP: Stride
+
+perf:
+system.cpu.icache.demand_hits::.cpu.inst         5692                       # number of demand (read+write) hits
+system.cpu.icache.demand_hits::total             5692                       # number of demand (read+write) hits
+system.cpu.icache.overall_hits::.cpu.inst         5692                       # number of overall hits
+system.cpu.icache.overall_hits::total            5692                       # number of overall hits
+system.cpu.icache.demand_misses::.cpu.inst          529                       # number of demand (read+write) misses
+system.cpu.icache.demand_misses::total            529                       # number of demand (read+write) misses
+system.cpu.icache.overall_misses::.cpu.inst          529                       # number of overall misses
+system.cpu.icache.overall_misses::total           529                       # number of overall misses
+
+
+system.cpu.dcache.demand_hits::.cpu.data         3535                       # number of demand (read+write) hits
+system.cpu.dcache.demand_hits::total             3535                       # number of demand (read+write) hits
+system.cpu.dcache.overall_hits::.cpu.data         3535                       # number of overall hits
+system.cpu.dcache.overall_hits::total            3535                       # number of overall hits
+system.cpu.dcache.demand_misses::.cpu.data          745                       # number of demand (read+write) misses
+system.cpu.dcache.demand_misses::total            745                       # number of demand (read+write) misses
+system.cpu.dcache.overall_misses::.cpu.data          745                       # number of overall misses
+system.cpu.dcache.overall_misses::total           745                       # number of overall misses
+
+
+
+3.
+L1D L1I : LRU
+L1D L1I HWP: IndirectMemory
+
+perf:
+
+
+system.cpu.icache.demand_hits::.cpu.inst         5718                       # number of demand (read+write) hits
+system.cpu.icache.demand_hits::total             5718                       # number of demand (read+write) hits
+system.cpu.icache.overall_hits::.cpu.inst         5718                       # number of overall hits
+system.cpu.icache.overall_hits::total            5718                       # number of overall hits
+system.cpu.icache.demand_misses::.cpu.inst          528                       # number of demand (read+write) misses
+system.cpu.icache.demand_misses::total            528                       # number of demand (read+write) misses
+system.cpu.icache.overall_misses::.cpu.inst          528                       # number of overall misses
+system.cpu.icache.overall_misses::total           528                       # number of overall misses
+
+
+system.cpu.dcache.demand_hits::.cpu.data         3484                       # number of demand (read+write) hits
+system.cpu.dcache.demand_hits::total             3484                       # number of demand (read+write) hits
+system.cpu.dcache.overall_hits::.cpu.data         3484                       # number of overall hits
+system.cpu.dcache.overall_hits::total            3484                       # number of overall hits
+system.cpu.dcache.demand_misses::.cpu.data          800                       # number of demand (read+write) misses
+system.cpu.dcache.demand_misses::total            800                       # number of demand (read+write) misses
+system.cpu.dcache.overall_misses::.cpu.data          800                       # number of overall misses
+system.cpu.dcache.overall_misses::total           800                       # number of overall misses
+
+
+
+4.
+L1D L1I : LRU
+L1D L1I HWP: SignaturePath
+
+perf:
+system.cpu.icache.demand_hits::.cpu.inst         6067                       # number of demand (read+write) hits
+system.cpu.icache.demand_hits::total             6067                       # number of demand (read+write) hits
+system.cpu.icache.overall_hits::.cpu.inst         6067                       # number of overall hits
+system.cpu.icache.overall_hits::total            6067                       # number of overall hits
+system.cpu.icache.demand_misses::.cpu.inst          359                       # number of demand (read+write) misses
+system.cpu.icache.demand_misses::total            359                       # number of demand (read+write) misses
+system.cpu.icache.overall_misses::.cpu.inst          359                       # number of overall misses
+system.cpu.icache.overall_misses::total           359                       # number of overall misses
+
+
+system.cpu.dcache.demand_hits::.cpu.data         3556                       # number of demand (read+write) hits
+system.cpu.dcache.demand_hits::total             3556                       # number of demand (read+write) hits
+system.cpu.dcache.overall_hits::.cpu.data         3556                       # number of overall hits
+system.cpu.dcache.overall_hits::total            3556                       # number of overall hits
+system.cpu.dcache.demand_misses::.cpu.data          734                       # number of demand (read+write) misses
+system.cpu.dcache.demand_misses::total            734                       # number of demand (read+write) misses
+system.cpu.dcache.overall_misses::.cpu.data          734                       # number of overall misses
+system.cpu.dcache.overall_misses::total           734                       # number of overall misses
+
+
+5.
+L1D L1I : LRU
+L1D L1I HWP: Tagged
+
+perf:
+system.cpu.icache.demand_hits::.cpu.inst         5999                       # number of demand (read+write) hits
+system.cpu.icache.demand_hits::total             5999                       # number of demand (read+write) hits
+system.cpu.icache.overall_hits::.cpu.inst         5999                       # number of overall hits
+system.cpu.icache.overall_hits::total            5999                       # number of overall hits
+system.cpu.icache.demand_misses::.cpu.inst          354                       # number of demand (read+write) misses
+system.cpu.icache.demand_misses::total            354                       # number of demand (read+write) misses
+system.cpu.icache.overall_misses::.cpu.inst          354                       # number of overall misses
+system.cpu.icache.overall_misses::total           354                       # number of overall misses
+
+
+system.cpu.dcache.demand_hits::.cpu.data         3596                       # number of demand (read+write) hits
+system.cpu.dcache.demand_hits::total             3596                       # number of demand (read+write) hits
+system.cpu.dcache.overall_hits::.cpu.data         3596                       # number of overall hits
+system.cpu.dcache.overall_hits::total            3596                       # number of overall hits
+system.cpu.dcache.demand_misses::.cpu.data          664                       # number of demand (read+write) misses
+system.cpu.dcache.demand_misses::total            664                       # number of demand (read+write) misses
+system.cpu.dcache.overall_misses::.cpu.data          664                       # number of overall misses
+system.cpu.dcache.overall_misses::total           664                       # number of overall misses
+
+
+6.
+L1D L1I : LRU
+L1I HWP: Stride
+L1D HWP: none
+
+perf:
+system.cpu.icache.demand_hits::.cpu.inst         5781                       # number of demand (read+write) hits
+system.cpu.icache.demand_hits::total             5781                       # number of demand (read+write) hits
+system.cpu.icache.overall_hits::.cpu.inst         5781                       # number of overall hits
+system.cpu.icache.overall_hits::total            5781                       # number of overall hits
+system.cpu.icache.demand_misses::.cpu.inst          528                       # number of demand (read+write) misses
+system.cpu.icache.demand_misses::total            528                       # number of demand (read+write) misses
+system.cpu.icache.overall_misses::.cpu.inst          528                       # number of overall misses
+system.cpu.icache.overall_misses::total           528                       # number of overall misses
+
+
+system.cpu.dcache.demand_hits::.cpu.data         3418                       # number of demand (read+write) hits
+system.cpu.dcache.demand_hits::total             3418                       # number of demand (read+write) hits
+system.cpu.dcache.overall_hits::.cpu.data         3418                       # number of overall hits
+system.cpu.dcache.overall_hits::total            3418                       # number of overall hits
+system.cpu.dcache.demand_misses::.cpu.data          868                       # number of demand (read+write) misses
+system.cpu.dcache.demand_misses::total            868                       # number of demand (read+write) misses
+system.cpu.dcache.overall_misses::.cpu.data          868                       # number of overall misses
+system.cpu.dcache.overall_misses::total           868                       # number of overall misses
+
+
+7.
+L1D L1I : LRU
+L1I HWP: Stride
+L1D HWP: IndirectMemory
+
+perf:
+system.cpu.icache.demand_hits::.cpu.inst         5718                       # number of demand (read+write) hits
+system.cpu.icache.demand_hits::total             5718                       # number of demand (read+write) hits
+system.cpu.icache.overall_hits::.cpu.inst         5718                       # number of overall hits
+system.cpu.icache.overall_hits::total            5718                       # number of overall hits
+system.cpu.icache.demand_misses::.cpu.inst          528                       # number of demand (read+write) misses
+system.cpu.icache.demand_misses::total            528                       # number of demand (read+write) misses
+system.cpu.icache.overall_misses::.cpu.inst          528                       # number of overall misses
+system.cpu.icache.overall_misses::total           528                       # number of overall misses
+
+
+system.cpu.dcache.demand_hits::.cpu.data         3484                       # number of demand (read+write) hits
+system.cpu.dcache.demand_hits::total             3484                       # number of demand (read+write) hits
+system.cpu.dcache.overall_hits::.cpu.data         3484                       # number of overall hits
+system.cpu.dcache.overall_hits::total            3484                       # number of overall hits
+system.cpu.dcache.demand_misses::.cpu.data          800                       # number of demand (read+write) misses
+system.cpu.dcache.demand_misses::total            800                       # number of demand (read+write) misses
+system.cpu.dcache.overall_misses::.cpu.data          800                       # number of overall misses
+system.cpu.dcache.overall_misses::total           800                       # number of overall misses
+
+8.
+L1D L1I : LRU
+L1I HWP: Stride
+L1D HWP: SignaturePath
+
+perf:
+
+system.cpu.icache.demand_hits::.cpu.inst         5635                       # number of demand (read+write) hits
+system.cpu.icache.demand_hits::total             5635                       # number of demand (read+write) hits
+system.cpu.icache.overall_hits::.cpu.inst         5635                       # number of overall hits
+system.cpu.icache.overall_hits::total            5635                       # number of overall hits
+system.cpu.icache.demand_misses::.cpu.inst          525                       # number of demand (read+write) misses
+system.cpu.icache.demand_misses::total            525                       # number of demand (read+write) misses
+system.cpu.icache.overall_misses::.cpu.inst          525                       # number of overall misses
+system.cpu.icache.overall_misses::total           525                       # number of overall misses
+
+
+system.cpu.dcache.demand_hits::.cpu.data         3527                       # number of demand (read+write) hits
+system.cpu.dcache.demand_hits::total             3527                       # number of demand (read+write) hits
+system.cpu.dcache.overall_hits::.cpu.data         3527                       # number of overall hits
+system.cpu.dcache.overall_hits::total            3527                       # number of overall hits
+system.cpu.dcache.demand_misses::.cpu.data          735                       # number of demand (read+write) misses
+system.cpu.dcache.demand_misses::total            735                       # number of demand (read+write) misses
+system.cpu.dcache.overall_misses::.cpu.data          735                       # number of overall misses
+system.cpu.dcache.overall_misses::total           735                       # number of overall misses
+
+
+9.
+L1D L1I : LRU
+L1I HWP: Stride
+L1D HWP: Tagged
+
+perf:
+system.cpu.icache.demand_hits::.cpu.inst         5528                       # number of demand (read+write) hits
+system.cpu.icache.demand_hits::total             5528                       # number of demand (read+write) hits
+system.cpu.icache.overall_hits::.cpu.inst         5528                       # number of overall hits
+system.cpu.icache.overall_hits::total            5528                       # number of overall hits
+system.cpu.icache.demand_misses::.cpu.inst          522                       # number of demand (read+write) misses
+system.cpu.icache.demand_misses::total            522                       # number of demand (read+write) misses
+system.cpu.icache.overall_misses::.cpu.inst          522                       # number of overall misses
+system.cpu.icache.overall_misses::total           522                       # number of overall misses
+
+
+system.cpu.dcache.demand_hits::.cpu.data         3575                       # number of demand (read+write) hits
+system.cpu.dcache.demand_hits::total             3575                       # number of demand (read+write) hits
+system.cpu.dcache.overall_hits::.cpu.data         3575                       # number of overall hits
+system.cpu.dcache.overall_hits::total            3575                       # number of overall hits
+system.cpu.dcache.demand_misses::.cpu.data          661                       # number of demand (read+write) misses
+system.cpu.dcache.demand_misses::total            661                       # number of demand (read+write) misses
+system.cpu.dcache.overall_misses::.cpu.data          661                       # number of overall misses
+system.cpu.dcache.overall_misses::total           661                       # number of overall misses
+
+
+
+10.
+L1D L1I : LRU
+L1I HWP: IndirectMemory
+L1D HWP: Stride
+
+perf:
+
+system.cpu.icache.demand_hits::.cpu.inst         5692                       # number of demand (read+write) hits
+system.cpu.icache.demand_hits::total             5692                       # number of demand (read+write) hits
+system.cpu.icache.overall_hits::.cpu.inst         5692                       # number of overall hits
+system.cpu.icache.overall_hits::total            5692                       # number of overall hits
+system.cpu.icache.demand_misses::.cpu.inst          529                       # number of demand (read+write) misses
+system.cpu.icache.demand_misses::total            529                       # number of demand (read+write) misses
+system.cpu.icache.overall_misses::.cpu.inst          529                       # number of overall misses
+system.cpu.icache.overall_misses::total           529                       # number of overall misses
+
+
+system.cpu.dcache.demand_hits::.cpu.data         3535                       # number of demand (read+write) hits
+system.cpu.dcache.demand_hits::total             3535                       # number of demand (read+write) hits
+system.cpu.dcache.overall_hits::.cpu.data         3535                       # number of overall hits
+system.cpu.dcache.overall_hits::total            3535                       # number of overall hits
+system.cpu.dcache.demand_misses::.cpu.data          745                       # number of demand (read+write) misses
+system.cpu.dcache.demand_misses::total            745                       # number of demand (read+write) misses
+system.cpu.dcache.overall_misses::.cpu.data          745                       # number of overall misses
+system.cpu.dcache.overall_misses::total           745                       # number of overall misses
+
+
+11.
+L1D L1I : LRU
+L1I HWP: SignaturePath
+L1D HWP: Stride
+
+perf:
+
+system.cpu.icache.demand_hits::.cpu.inst         6129                       # number of demand (read+write) hits
+system.cpu.icache.demand_hits::total             6129                       # number of demand (read+write) hits
+system.cpu.icache.overall_hits::.cpu.inst         6129                       # number of overall hits
+system.cpu.icache.overall_hits::total            6129                       # number of overall hits
+system.cpu.icache.demand_misses::.cpu.inst          355                       # number of demand (read+write) misses
+system.cpu.icache.demand_misses::total            355                       # number of demand (read+write) misses
+system.cpu.icache.overall_misses::.cpu.inst          355                       # number of overall misses
+system.cpu.icache.overall_misses::total           355                       # number of overall misses
+
+
+system.cpu.dcache.demand_hits::.cpu.data         3552                       # number of demand (read+write) hits
+system.cpu.dcache.demand_hits::total             3552                       # number of demand (read+write) hits
+system.cpu.dcache.overall_hits::.cpu.data         3552                       # number of overall hits
+system.cpu.dcache.overall_hits::total            3552                       # number of overall hits
+system.cpu.dcache.demand_misses::.cpu.data          746                       # number of demand (read+write) misses
+system.cpu.dcache.demand_misses::total            746                       # number of demand (read+write) misses
+system.cpu.dcache.overall_misses::.cpu.data          746                       # number of overall misses
+system.cpu.dcache.overall_misses::total           746                       # number of overall misses
+
+
+12.
+L1D L1I : LRU
+L1I HWP: Tagged
+L1D HWP: Stride
+
+Perf:
+system.cpu.icache.demand_hits::.cpu.inst         6348                       # number of demand (read+write) hits
+system.cpu.icache.demand_hits::total             6348                       # number of demand (read+write) hits
+system.cpu.icache.overall_hits::.cpu.inst         6348                       # number of overall hits
+system.cpu.icache.overall_hits::total            6348                       # number of overall hits
+system.cpu.icache.demand_misses::.cpu.inst          335                       # number of demand (read+write) misses
+system.cpu.icache.demand_misses::total            335                       # number of demand (read+write) misses
+system.cpu.icache.overall_misses::.cpu.inst          335                       # number of overall misses
+system.cpu.icache.overall_misses::total           335                       # number of overall misses
+
+
+system.cpu.dcache.demand_hits::.cpu.data         3575                       # number of demand (read+write) hits
+system.cpu.dcache.demand_hits::total             3575                       # number of demand (read+write) hits
+system.cpu.dcache.overall_hits::.cpu.data         3575                       # number of overall hits
+system.cpu.dcache.overall_hits::total            3575                       # number of overall hits
+system.cpu.dcache.demand_misses::.cpu.data          768                       # number of demand (read+write) misses
+system.cpu.dcache.demand_misses::total            768                       # number of demand (read+write) misses
+system.cpu.dcache.overall_misses::.cpu.data          768                       # number of overall misses
+system.cpu.dcache.overall_misses::total           768                       # number of overall misses
+
+
+
+双tagged性能最好

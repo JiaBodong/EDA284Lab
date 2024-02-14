@@ -55,7 +55,7 @@ arr_t matmul_basic(const arr_t A, const arr_t B, const int M, const int N, const
 #endif
 
 int main() { 
-    const int N = 16;
+    const int N = 64;
     arr_t A = (arr_t) malloc(N * N * sizeof(real_t)); 
     arr_t B = (arr_t) malloc(N * N * sizeof(real_t)); 
     clock_t start = clock();
