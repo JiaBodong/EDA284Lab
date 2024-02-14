@@ -34,7 +34,7 @@ plt.plot(prefetchers, l1i_miss_rates, marker='s',label="L1I Miss Rate")
 
 # 
 plt.title("Cache Prefetcher Performance")
-plt.xlabel("Cache Prefetcher")
+plt.xlabel("Cache Configuration")
 plt.ylabel("Miss Rate")
 plt.legend()
 
