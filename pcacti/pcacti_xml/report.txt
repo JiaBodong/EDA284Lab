@@ -1,0 +1,123 @@
+
+---------- P-CACTI, Uniform Cache Access SRAM Model ----------
+
+Cache Parameters:
+    Total cache size (bytes): 8000000
+    Number of banks: 8
+    Associativity: 16
+    Block size (bytes): 64
+    Read/write Ports: 8
+    Read ports: 0
+    Write ports: 0
+    Technology size (nm): 7
+
+    Access time (ns): 3.54757
+    Cycle time (ns):  1.14898
+    Total dynamic read energy per access (nJ): 3.07309
+    Total dynamic write energy per access (nJ): 3.09353
+    Total leakage power of a bank (mW): 183.296
+    Cache height x width (mm): 5.43932 x 7.79171
+    Cache area (mm2): 42.3816
+
+    Best Ndwl : 32
+    Best Ndbl : 2
+    Best Nspd : 1
+    Best Ndcm : 1
+    Best Ndsam L1 : 16
+    Best Ndsam L2 : 1
+
+    Data array, H-tree wire type: Delay optimized global wires
+
+Time Components:
+
+  Data side (with Output driver) (ns): 3.54757
+	H-tree input delay (ns): 1.38628
+	Decoder + wordline delay (ns): 0.430927
+	Bitline delay (ns): 0.296176
+	Sense Amplifier delay (ns): 0.000810703
+	H-tree output delay (ns): 0.549257
+
+
+Power Components:
+
+  Data array: Total dynamic read energy/access  (nJ): 3.07309
+	Total leakage read/write power of a bank (mW): 183.296
+	Total energy in H-tree (that includes both address and data transfer) (nJ): 3.05281
+	Output Htree Energy (nJ): 1.0805
+	Decoder (nJ): 0.000270993
+	Wordline (nJ): 0.000216488
+	Bitline mux & associated drivers (nJ): 0
+	Sense amp mux & associated drivers (nJ): 0
+	Bitlines (nJ): 0.0116432
+	Sense amplifier energy (nJ): 0.000285116
+	Sub-array output driver (nJ): 0.00698938
+
+
+Area Components:
+
+  Data array: Area (mm2): 42.3816
+	Height (mm): 5.43932
+	Width (mm): 7.79171
+	Area efficiency (Memory cell area/Total area) - 16.2694 %
+		MAT Height (mm): 0.352615
+		MAT Length (mm): 0.217682
+		Subarray Height (mm): 0.150304
+		Subarray Length (mm): 0.10164
+
+Wire Properties:
+
+  Delay Optimal
+	Repeater size - 46.1485 
+	Repeater spacing - 0.0216187 (mm) 
+	Delay - 0.136016 (ns/mm) 
+	PowerD - 0.000110224 (nJ/mm) 
+	PowerL - 0.00240569 (mW/mm)
+	Wire width - 0.028 microns
+	Wire spacing - 0.028 microns
+
+  5% Overhead
+	Repeater size - 26.1485 
+	Repeater spacing - 0.0216187 (mm) 
+	Delay - 0.142537 (ns/mm) 
+	PowerD - 8.40782e-05 (nJ/mm) 
+	PowerL - 0.0013631 (mW/mm)
+	Wire width - 0.028 microns
+	Wire spacing - 0.028 microns
+
+  10% Overhead
+	Repeater size - 22.1485 
+	Repeater spacing - 0.0216187 (mm) 
+	Delay - 0.148952 (ns/mm) 
+	PowerD - 7.89553e-05 (nJ/mm) 
+	PowerL - 0.00115458 (mW/mm)
+	Wire width - 0.028 microns
+	Wire spacing - 0.028 microns
+
+  20% Overhead
+	Repeater size - 18.1485 
+	Repeater spacing - 0.0216187 (mm) 
+	Delay - 0.1597 (ns/mm) 
+	PowerD - 7.38679e-05 (nJ/mm) 
+	PowerL - 0.000946068 (mW/mm)
+	Wire width - 0.028 microns
+	Wire spacing - 0.028 microns
+
+  30% Overhead
+	Repeater size - 15.1485 
+	Repeater spacing - 0.0216187 (mm) 
+	Delay - 0.172669 (ns/mm) 
+	PowerD - 7.00755e-05 (nJ/mm) 
+	PowerL - 0.000789679 (mW/mm)
+	Wire width - 0.028 microns
+	Wire spacing - 0.028 microns
+
+  Low-swing wire (1 mm) - Note: Unlike repeated wires, 
+	delay and power values of low-swing wires do not
+	have a linear relationship with length. 
+	delay - 0.882769 (ns) 
+	powerD - 2.02061e-05 (nJ) 
+	PowerL - 5.08959e-08 (mW)
+	Wire width - 5.6e-08 microns
+	Wire spacing - 5.6e-08 microns
+
+

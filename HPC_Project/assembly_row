@@ -1,0 +1,497 @@
+	.arch armv8-a
+	.file	"nbody.cpp"
+	.text
+	.align	2
+	.p2align 4,,11
+	.global	_Z19initializeParticlesiP20moving_particle_type
+	.type	_Z19initializeParticlesiP20moving_particle_type, %function
+_Z19initializeParticlesiP20moving_particle_type:
+.LFB556:
+	.cfi_startproc
+	cmp	w0, 0
+	ble	.L6
+	stp	x29, x30, [sp, -64]!
+	.cfi_def_cfa_offset 64
+	.cfi_offset 29, -64
+	.cfi_offset 30, -56
+	sub	w0, w0, #1
+	mov	w2, 1148846080
+	mov	x29, sp
+	stp	x21, x22, [sp, 32]
+	.cfi_offset 21, -32
+	.cfi_offset 22, -24
+	add	x22, x1, 24
+	mov	w21, 19923
+	stp	x19, x20, [sp, 16]
+	.cfi_offset 19, -48
+	.cfi_offset 20, -40
+	mov	x19, x1
+	mov	w1, 24
+	movk	w21, 0x1062, lsl 16
+	mov	w20, 1000
+	umaddl	x22, w0, w1, x22
+	str	d8, [sp, 48]
+	.cfi_offset 72, -16
+	fmov	s8, w2
+	.p2align 3,,7
+.L3:
+	bl	rand
+	smull	x1, w0, w21
+	ldr	s1, [x19]
+	add	x19, x19, 24
+	asr	x1, x1, 38
+	sub	w1, w1, w0, asr 31
+	msub	w0, w1, w20, w0
+	scvtf	s0, w0
+	fdiv	s0, s0, s8
+	fadd	s0, s1, s0
+	str	s0, [x19, -24]
+	bl	rand
+	smull	x1, w0, w21
+	ldr	s1, [x19, -20]
+	asr	x1, x1, 38
+	sub	w1, w1, w0, asr 31
+	msub	w0, w1, w20, w0
+	scvtf	s0, w0
+	fdiv	s0, s0, s8
+	fadd	s0, s1, s0
+	str	s0, [x19, -20]
+	bl	rand
+	smull	x1, w0, w21
+	ldr	s1, [x19, -16]
+	asr	x1, x1, 38
+	sub	w1, w1, w0, asr 31
+	msub	w0, w1, w20, w0
+	scvtf	s0, w0
+	fdiv	s0, s0, s8
+	fadd	s0, s1, s0
+	str	s0, [x19, -16]
+	bl	rand
+	smull	x1, w0, w21
+	ldr	s1, [x19, -12]
+	asr	x1, x1, 38
+	sub	w1, w1, w0, asr 31
+	msub	w0, w1, w20, w0
+	scvtf	s0, w0
+	fdiv	s0, s0, s8
+	fadd	s0, s1, s0
+	str	s0, [x19, -12]
+	bl	rand
+	smull	x1, w0, w21
+	ldr	s1, [x19, -8]
+	asr	x1, x1, 38
+	sub	w1, w1, w0, asr 31
+	msub	w0, w1, w20, w0
+	scvtf	s0, w0
+	fdiv	s0, s0, s8
+	fadd	s0, s1, s0
+	str	s0, [x19, -8]
+	bl	rand
+	smull	x1, w0, w21
+	ldr	s1, [x19, -4]
+	asr	x1, x1, 38
+	sub	w1, w1, w0, asr 31
+	msub	w0, w1, w20, w0
+	scvtf	s0, w0
+	fdiv	s0, s0, s8
+	fadd	s0, s1, s0
+	str	s0, [x19, -4]
+	cmp	x19, x22
+	bne	.L3
+	ldp	x19, x20, [sp, 16]
+	ldp	x21, x22, [sp, 32]
+	ldr	d8, [sp, 48]
+	ldp	x29, x30, [sp], 64
+	.cfi_restore 30
+	.cfi_restore 29
+	.cfi_restore 21
+	.cfi_restore 22
+	.cfi_restore 19
+	.cfi_restore 20
+	.cfi_restore 72
+	.cfi_def_cfa_offset 0
+	ret
+	.p2align 2,,3
+.L6:
+	ret
+	.cfi_endproc
+.LFE556:
+	.size	_Z19initializeParticlesiP20moving_particle_type, .-_Z19initializeParticlesiP20moving_particle_type
+	.align	2
+	.p2align 4,,11
+	.global	_Z13moveParticlesiP20moving_particle_typef
+	.type	_Z13moveParticlesiP20moving_particle_typef, %function
+_Z13moveParticlesiP20moving_particle_typef:
+.LFB557:
+	.cfi_startproc
+	cmp	w0, 0
+	ble	.L19
+	stp	x29, x30, [sp, -128]!
+	.cfi_def_cfa_offset 128
+	.cfi_offset 29, -128
+	.cfi_offset 30, -120
+	sub	w0, w0, #1
+	mov	w2, 24
+	mov	x29, sp
+	stp	x21, x22, [sp, 32]
+	.cfi_offset 21, -96
+	.cfi_offset 22, -88
+	add	x21, x1, 24
+	mov	x22, x1
+	stp	d10, d11, [sp, 80]
+	.cfi_offset 74, -48
+	.cfi_offset 75, -40
+	fmov	s11, s0
+	umaddl	x21, w0, w2, x21
+	stp	x19, x20, [sp, 16]
+	.cfi_offset 19, -112
+	.cfi_offset 20, -104
+	mov	x20, x1
+	str	x23, [sp, 48]
+	.cfi_offset 23, -80
+	mov	x23, x1
+	mov	w1, 58632
+	stp	d8, d9, [sp, 64]
+	movk	w1, 0x1e3c, lsl 16
+	fmov	s10, w1
+	stp	d12, d13, [sp, 96]
+	stp	d14, d15, [sp, 112]
+	.cfi_offset 72, -64
+	.cfi_offset 73, -56
+	.cfi_offset 76, -32
+	.cfi_offset 77, -24
+	.cfi_offset 78, -16
+	.cfi_offset 79, -8
+	.p2align 3,,7
+.L13:
+	movi	v15.2s, #0
+	mov	x19, x23
+	fmov	s14, s15
+	fmov	s13, s15
+	.p2align 3,,7
+.L12:
+	ldp	s0, s2, [x20]
+	fmov	d1, 1.5e+0
+	ldp	s12, s9, [x19]
+	add	x19, x19, 24
+	ldr	s8, [x19, -16]
+	fsub	s9, s9, s2
+	fsub	s12, s12, s0
+	ldr	s2, [x20, 8]
+	fmul	s0, s9, s9
+	fsub	s8, s8, s2
+	fmadd	s0, s12, s12, s0
+	fmadd	s0, s8, s8, s0
+	fadd	s0, s0, s10
+	fcvt	d0, s0
+	bl	pow
+	fcvt	s0, d0
+	fdiv	s12, s12, s0
+	fdiv	s9, s9, s0
+	fdiv	s8, s8, s0
+	fadd	s13, s13, s12
+	fadd	s14, s14, s9
+	fadd	s15, s15, s8
+	cmp	x21, x19
+	bne	.L12
+	fmul	s13, s13, s11
+	fmul	s14, s14, s11
+	ldr	s0, [x20, 20]
+	add	x20, x20, 24
+	fmadd	s15, s15, s11, s0
+	ldr	d0, [x20, -12]
+	ins	v13.s[1], v14.s[0]
+	fadd	v13.2s, v13.2s, v0.2s
+	str	s15, [x20, -4]
+	str	d13, [x20, -12]
+	cmp	x21, x20
+	bne	.L13
+	dup	v3.2s, v11.s[0]
+	.p2align 3,,7
+.L15:
+	ldr	s2, [x22, 20]
+	add	x22, x22, 24
+	ldr	s0, [x22, -16]
+	ldr	d1, [x22, -24]
+	fmadd	s0, s2, s11, s0
+	ldr	d2, [x22, -12]
+	fmla	v1.2s, v3.2s, v2.2s
+	str	d1, [x22, -24]
+	str	s0, [x22, -16]
+	cmp	x21, x22
+	bne	.L15
+	ldp	x19, x20, [sp, 16]
+	ldp	x21, x22, [sp, 32]
+	ldr	x23, [sp, 48]
+	ldp	d8, d9, [sp, 64]
+	ldp	d10, d11, [sp, 80]
+	ldp	d12, d13, [sp, 96]
+	ldp	d14, d15, [sp, 112]
+	ldp	x29, x30, [sp], 128
+	.cfi_restore 30
+	.cfi_restore 29
+	.cfi_restore 23
+	.cfi_restore 21
+	.cfi_restore 22
+	.cfi_restore 19
+	.cfi_restore 20
+	.cfi_restore 78
+	.cfi_restore 79
+	.cfi_restore 76
+	.cfi_restore 77
+	.cfi_restore 74
+	.cfi_restore 75
+	.cfi_restore 72
+	.cfi_restore 73
+	.cfi_def_cfa_offset 0
+	ret
+.L19:
+	ret
+	.cfi_endproc
+.LFE557:
+	.size	_Z13moveParticlesiP20moving_particle_typef, .-_Z13moveParticlesiP20moving_particle_typef
+	.section	.rodata.str1.8,"aMS",@progbits,1
+	.align	3
+.LC0:
+	.string	"*****************************************************"
+	.align	3
+.LC1:
+	.string	"Propagating %d particles\n"
+	.align	3
+.LC2:
+	.string	"Time, s"
+	.align	3
+.LC3:
+	.string	"Step"
+	.align	3
+.LC4:
+	.string	"\033[1m%5s %10s\033[0m\n"
+	.align	3
+.LC5:
+	.string	""
+	.align	3
+.LC6:
+	.string	"%5d %10.3e %s\n"
+	.align	3
+.LC7:
+	.string	"excluded"
+	.align	3
+.LC8:
+	.string	"Average performance:"
+	.align	3
+.LC9:
+	.string	"\033[1m%s %4s \033[42m%10.1f step/s\033[0m\n"
+	.text
+	.align	2
+	.p2align 4,,11
+	.global	_Z17perform_benchmarkiiP20moving_particle_typef
+	.type	_Z17perform_benchmarkiiP20moving_particle_typef, %function
+_Z17perform_benchmarkiiP20moving_particle_typef:
+.LFB558:
+	.cfi_startproc
+	stp	x29, x30, [sp, -128]!
+	.cfi_def_cfa_offset 128
+	.cfi_offset 29, -128
+	.cfi_offset 30, -120
+	adrp	x3, .LC0
+	mov	x29, sp
+	stp	d8, d9, [sp, 96]
+	.cfi_offset 72, -32
+	.cfi_offset 73, -24
+	fmov	s9, s0
+	stp	x19, x20, [sp, 16]
+	.cfi_offset 19, -112
+	.cfi_offset 20, -104
+	add	x19, x3, :lo12:.LC0
+	mov	w20, w1
+	stp	x21, x22, [sp, 32]
+	.cfi_offset 21, -96
+	.cfi_offset 22, -88
+	mov	x22, x2
+	mov	w21, w0
+	mov	x0, x19
+	stp	x23, x24, [sp, 48]
+	.cfi_offset 23, -80
+	.cfi_offset 24, -72
+	adrp	x24, :got:stdout
+	stp	x25, x26, [sp, 64]
+	.cfi_offset 25, -64
+	.cfi_offset 26, -56
+	bl	puts
+	mov	w1, w21
+	adrp	x0, .LC1
+	add	x0, x0, :lo12:.LC1
+	bl	printf
+	adrp	x23, .LC5
+	mov	x0, x19
+	bl	puts
+	adrp	x2, .LC2
+	adrp	x1, .LC3
+	add	x2, x2, :lo12:.LC2
+	add	x1, x1, :lo12:.LC3
+	adrp	x0, .LC4
+	add	x0, x0, :lo12:.LC4
+	bl	printf
+	ldr	x0, [x24, #:got_lo12:stdout]
+	ldr	x0, [x0]
+	bl	fflush
+	cmp	w20, 0
+	ble	.L23
+	mov	x25, 63439
+	mov	x0, 145685290680320
+	movk	x25, 0xe353, lsl 16
+	adrp	x19, .LC6
+	movk	x25, 0x9ba5, lsl 32
+	movk	x0, 0x412e, lsl 48
+	add	x19, x19, :lo12:.LC6
+	adrp	x23, .LC5
+	movk	x25, 0x20c4, lsl 48
+	stp	x27, x28, [sp, 80]
+	.cfi_offset 28, -40
+	.cfi_offset 27, -48
+	adrp	x27, .LC7
+	mov	w28, 1
+	add	x27, x27, :lo12:.LC7
+	str	d10, [sp, 112]
+	.cfi_offset 74, -16
+	fmov	d10, x0
+	b	.L27
+	.p2align 2,,3
+.L35:
+	bl	printf
+	add	w28, w28, 1
+	ldr	x0, [x24, #:got_lo12:stdout]
+	ldr	x0, [x0]
+	bl	fflush
+	cmp	w20, w28
+	blt	.L34
+.L27:
+	bl	_ZNSt6chrono3_V212system_clock3nowEv
+	fmov	s0, s9
+	mov	x1, x22
+	mov	x26, x0
+	mov	w0, w21
+	bl	_Z13moveParticlesiP20moving_particle_typef
+	bl	_ZNSt6chrono3_V212system_clock3nowEv
+	sub	x3, x0, x26
+	mov	w1, w28
+	add	x2, x23, :lo12:.LC5
+	mov	x0, x19
+	smulh	x4, x3, x25
+	asr	x4, x4, 7
+	sub	x3, x4, x3, asr 63
+	scvtf	d0, x3
+	fdiv	d0, d0, d10
+	fadd	d8, d8, d0
+	cmp	w28, 2
+	bgt	.L35
+	mov	x2, x27
+	bl	printf
+	ldr	x0, [x24, #:got_lo12:stdout]
+	add	w28, w28, 1
+	ldr	x0, [x0]
+	bl	fflush
+	cmp	w20, w28
+	bge	.L27
+.L34:
+	ldp	x27, x28, [sp, 80]
+	.cfi_restore 28
+	.cfi_restore 27
+	ldr	d10, [sp, 112]
+	.cfi_restore 74
+.L23:
+	adrp	x0, .LC0
+	add	x26, x0, :lo12:.LC0
+	mov	x0, x26
+	bl	puts
+	scvtf	d1, w20
+	fmov	d0, 1.0e+0
+	add	x2, x23, :lo12:.LC5
+	adrp	x1, .LC8
+	adrp	x0, .LC9
+	add	x1, x1, :lo12:.LC8
+	add	x0, x0, :lo12:.LC9
+	fdiv	d8, d8, d1
+	fdiv	d0, d0, d8
+	bl	printf
+	mov	x0, x26
+	ldp	x19, x20, [sp, 16]
+	ldp	x21, x22, [sp, 32]
+	ldp	x23, x24, [sp, 48]
+	ldp	x25, x26, [sp, 64]
+	ldp	d8, d9, [sp, 96]
+	ldp	x29, x30, [sp], 128
+	.cfi_restore 30
+	.cfi_restore 29
+	.cfi_restore 25
+	.cfi_restore 26
+	.cfi_restore 23
+	.cfi_restore 24
+	.cfi_restore 21
+	.cfi_restore 22
+	.cfi_restore 19
+	.cfi_restore 20
+	.cfi_restore 72
+	.cfi_restore 73
+	.cfi_def_cfa_offset 0
+	b	puts
+	.cfi_endproc
+.LFE558:
+	.size	_Z17perform_benchmarkiiP20moving_particle_typef, .-_Z17perform_benchmarkiiP20moving_particle_typef
+	.section	.rodata.str1.8
+	.align	3
+.LC10:
+	.string	"num_of_particles: %d\n"
+	.section	.text.startup,"ax",@progbits
+	.align	2
+	.p2align 4,,11
+	.global	main
+	.type	main, %function
+main:
+.LFB564:
+	.cfi_startproc
+	stp	x29, x30, [sp, -32]!
+	.cfi_def_cfa_offset 32
+	.cfi_offset 29, -32
+	.cfi_offset 30, -24
+	mov	w1, 256
+	adrp	x0, .LC10
+	mov	x29, sp
+	add	x0, x0, :lo12:.LC10
+	str	x19, [sp, 16]
+	.cfi_offset 19, -16
+	bl	printf
+	mov	x1, 6144
+	mov	x0, 64
+	bl	aligned_alloc
+	mov	x19, x0
+	mov	w0, 1
+	bl	srand
+	mov	x1, x19
+	mov	w0, 256
+	bl	_Z19initializeParticlesiP20moving_particle_type
+	mov	w0, 55050
+	mov	x2, x19
+	movk	w0, 0x3c23, lsl 16
+	fmov	s0, w0
+	mov	w1, 10
+	mov	w0, 256
+	bl	_Z17perform_benchmarkiiP20moving_particle_typef
+	cbz	x19, .L37
+	mov	x0, x19
+	mov	x1, 24
+	bl	_ZdlPvm
+.L37:
+	mov	w0, 0
+	ldr	x19, [sp, 16]
+	ldp	x29, x30, [sp], 32
+	.cfi_restore 30
+	.cfi_restore 29
+	.cfi_restore 19
+	.cfi_def_cfa_offset 0
+	ret
+	.cfi_endproc
+.LFE564:
+	.size	main, .-main
+	.ident	"GCC: (Debian 10.2.1-6) 10.2.1 20210110"
+	.section	.note.GNU-stack,"",@progbits

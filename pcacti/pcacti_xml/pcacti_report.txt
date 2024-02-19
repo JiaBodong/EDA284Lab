@@ -1,0 +1,7 @@
+Access time                           : 7.30777 ns
+Cycle time                            : 4.16529 ns
+Total dynamic read energy per access  : 3.939 nJ
+Total dynamic write energy per access : 4.02657 nJ
+Total leakage power of a bank         : 459.74 mW
+Cache height x width                  : 9.31797 mm x 8.75091 mm
+Cache area                            : 81.5407 mm2
