@@ -1,42 +1,64 @@
 import matplotlib.pyplot as plt
 
-# # LRU 16X16
-# prefetchers = ["None", "L1 Stride", "L1 IndirectMemory","L1 SignaturePath","L1 Tagged","L1I Stride + L1D IndiredcMemory","L1I Stride + L1D SignaturePath",
-#                "L1I Stride + L1D Tagged","L1I IndirectMemory + L1D Stride", "L1I SignaturePath + L1D Stride","L1I Tagged + L1D Stride"]
-# l1i_miss_rates = [0.084, 0.085, 0.085, 0.056, 0.056, 0.085, 0.085, 0.086, 0.085, 0.055, 0.053]
-# l1d_miss_rates = [0.203, 0.174, 0.187, 0.171, 0.156, 0.187, 0.172, 0.156, 0.174, 0.174, 0.177]
-
-# # Random 16X16
-# prefetchers = ["None", "L1 Stride", "L1 IndirectMemory","L1 SignaturePath","L1 Tagged","L1I Stride + L1D IndiredcMemory","L1I Stride + L1D SignaturePath",
-#                "L1I Stride + L1D Tagged","L1I IndirectMemory + L1D Stride", "L1I SignaturePath + L1D Stride","L1I Tagged + L1D Stride"]
-# l1i_miss_rates = [0.085, 0.086, 0.086, 0.056, 0.057, 0.086, 0.087, 0.088, 0.086, 0.057, 0.053]
-# l1d_miss_rates = [0.203, 0.174, 0.183, 0.171, 0.155, 0.183, 0.172, 0.157, 0.174, 0.174, 0.179]
 
 
-# # LRU  64X64
-# prefetchers = ["None", "L1 Stride", "L1 IndirectMemory","L1 SignaturePath","L1 Tagged","L1I Stride + L1D IndiredcMemory","L1I Stride + L1D SignaturePath",
-#                "L1I Stride + L1D Tagged","L1I IndirectMemory + L1D Stride", "L1I SignaturePath + L1D Stride","L1I Tagged + L1D Stride"]
-# l1i_miss_rates = [0.0070, 0.0070, 0.0070, 0.0048, 0.0046, 0.0070, 0.0070, 0.0070, 0.0070, 0.0047, 0.0045]
-# l1d_miss_rates = [0.1083, 0.0724, 0.0906, 0.0859, 0.0966, 0.0906, 0.0860, 0.0979, 0.0724, 0.0705, 0.0712]
+# # Little core LFU
+# prefetchers = ["None", "Both Stride", "Both IndirectMemory","Both SignaturePath","Both Tagged","L2 Stride + L1D IndiredcMemory","L2 Stride + L1D SignaturePath",
+#                "L2 Stride + L1D Tagged","L2 IndirectMemory + L1D Stride", "L2 SignaturePath + L1D Stride","L2 Tagged + L1D Stride"]
+# l2_miss_rates = [0.000786, 0.000544, 0.000493, 0.000184, 0.000105, 0.000666, 0.000427, 0.000216, 0.000393, 0.000401, 0.000305]
+# l1d_miss_rates = [0.491623, 0.365556, 0.253988, 0.439313, 0.492828, 0.254087, 0.351883, 0.492853, 0.366714, 0.367933, 0.366522]
 
 
-# Random  64X64
-prefetchers = ["None", "L1 Stride", "L1 IndirectMemory","L1 SignaturePath","L1 Tagged","L1I Stride + L1D IndiredcMemory","L1I Stride + L1D SignaturePath",
-               "L1I Stride + L1D Tagged","L1I IndirectMemory + L1D Stride", "L1I SignaturePath + L1D Stride","L1I Tagged + L1D Stride"]
-l1i_miss_rates = [0.0070, 0.0072, 0.0070, 0.0049, 0.0048, 0.0070, 0.0070, 0.0070, 0.0072, 0.0049, 0.0048]
-l1d_miss_rates = [0.1002, 0.0716, 0.0815, 0.0859, 0.0918, 0.0815, 0.0850, 0.0932, 0.0668, 0.0675, 0.0674]
+# # Big core LFU
+# prefetchers = ["None", "Both Stride", "Both IndirectMemory","Both SignaturePath","Both Tagged","L2 Stride + L1D IndiredcMemory","L2 Stride + L1D SignaturePath",
+#                "L2 Stride + L1D Tagged","L2 IndirectMemory + L1D Stride", "L2 SignaturePath + L1D Stride","L2 Tagged + L1D Stride"]
+# l2_miss_rates = [0.000785, 0.000730, 0.000435, 0.000460, 0.000315, 0.000723, 0.000749, 0.000683, 0.000426, 0.000412, 0.000300]
+# l1d_miss_rates = [0.493330, 0.492506, 0.490857, 0.491998, 0.492048, 0.491023, 0.492342, 0.492461, 0.492483, 0.492469, 0.492568]
 
 
-# 
+# Big core LRU
+prefetchers = ["None", "Both Stride", "Both IndirectMemory","Both SignaturePath","Both Tagged","L2 Stride + L1D IndiredcMemory","L2 Stride + L1D SignaturePath",
+               "L2 Stride + L1D Tagged","L2 IndirectMemory + L1D Stride", "L2 SignaturePath + L1D Stride","L2 Tagged + L1D Stride"]
+l2_miss_rates = [0.000764, 0.000724, 0.000426, 0.000448, 0.000329, 0.000736, 0.000739, 0.000676, 0.000413, 0.000403, 0.000289]
+l1d_miss_rates = [0.506047, 0.505651, 0.505588, 0.505661, 0.505605, 0.505617, 0.505814, 0.506028, 0.505557, 0.505524, 0.505534]
+
+
+# Normalize the data
+l2_max = max(l2_miss_rates)
+l2_min = min(l2_miss_rates)
+l1d_max = max(l1d_miss_rates)
+l1d_min = min(l1d_miss_rates)
+
+l2_miss_rates_normalized = [(x - l2_min) / (l2_max - l2_min) for x in l2_miss_rates]
+l1d_miss_rates_normalized = [(x - l1d_min) / (l1d_max - l1d_min) for x in l1d_miss_rates]
+
+# Plot the data
 plt.figure(figsize=(10, 6))
-plt.plot(prefetchers, l1d_miss_rates, marker='o',label="L1d Miss Rate")
-plt.plot(prefetchers, l1i_miss_rates, marker='s',label="L1I Miss Rate")
 
-# 
-plt.title("Cache Prefetcher Performance")
-plt.xlabel("Cache Configuration")
-plt.ylabel("Miss Rate")
-plt.legend()
+# Plot normalized data
+plt.plot(prefetchers, l1d_miss_rates_normalized, marker='o', label="L1d Miss Rate (Normalized)")
+plt.plot(prefetchers, l2_miss_rates_normalized, marker='s', label="L2 Miss Rate (Normalized)")
 
-# 
+# Plot original data
+plt.plot(prefetchers, l1d_miss_rates, linestyle='--', marker='o', color='gray', label="L1d Miss Rate (Original)")
+plt.plot(prefetchers, l2_miss_rates, linestyle='--', marker='s', color='gray', label="L2 Miss Rate (Original)")
+
+# Add labels with relative changes
+for i in range(len(prefetchers)):
+    plt.text(i, l1d_miss_rates_normalized[i], f"{l1d_miss_rates_normalized[i]*100:.2f}%", ha='right', va='bottom', fontsize=9, color='blue')
+    plt.text(i, l2_miss_rates_normalized[i], f"{l2_miss_rates_normalized[i]*100:.2f}%", ha='right', va='top', fontsize=9, color='orange')
+
+# Set plot title and labels
+plt.title("Normalized Cache Prefetcher Performance", fontsize=14)
+plt.xlabel("Cache Configuration", fontsize=12)
+plt.ylabel("Normalized Miss Rate", fontsize=12)
+plt.xticks(rotation=45, ha='right', fontsize=10)
+plt.yticks(fontsize=10)
+plt.legend(fontsize=10)
+
+# Remove grid
+plt.grid(False)
+
+# Show plot
+plt.tight_layout()
 plt.show()

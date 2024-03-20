@@ -209,10 +209,16 @@ vector <type_t> dot (const vector <type_t>& m1, const vector <type_t>& m2, const
                   } 
                 
                 }
-            }
         }
     }
-#else
+                    
+                    for(int k1 = k0; k1 < kmax; ++k1) {
+                      output[i1 * M + j1] += m1[i1 * K + k1] * m2[k1 * M + j1];
+                    }
+
+                  } 
+                
+                }
 #if defined(ENABLE_THREADING)
 #pragma omp parallel for
 #endif
